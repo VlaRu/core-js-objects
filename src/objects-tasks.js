@@ -17,10 +17,10 @@
  *    shallowCopy({a: 2, b: { a: [1, 2, 3]}}) => {a: 2, b: { a: [1, 2, 3]}}
  *    shallowCopy({}) => {}
  */
-function shallowCopy(/* obj */) {
-  throw new Error('Not implemented');
+function shallowCopy(obj) {
+  const copyObject = {};
+  return Object.assign(copyObject, obj);
 }
-
 /**
  * Merges array of objects into a single object. If there are overlapping keys, the values
  * should be summed.
